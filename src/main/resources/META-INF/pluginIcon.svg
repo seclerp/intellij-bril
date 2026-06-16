@@ -1,0 +1,21 @@
+<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="brilBg" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#46B1C9"/>
+      <stop offset="1" stop-color="#3358B7"/>
+    </linearGradient>
+  </defs>
+  <rect x="2.5" y="2.5" width="35" height="35" fill="url(#brilBg)"/>
+  <!-- Bril identity: an IR branch (one node forking into two), set upper-left
+       to balance the bottom-right cursor. -->
+  <g stroke="#FFFFFF" stroke-width="2.75" stroke-linecap="round" fill="none">
+    <path d="M15 9 L9.5 19.5 M15 9 L22 19.5"/>
+  </g>
+  <g fill="#FFFFFF">
+    <circle cx="15" cy="9" r="3.25"/>
+    <circle cx="9.5" cy="19.5" r="3.25"/>
+    <circle cx="22" cy="19.5" r="3.25"/>
+  </g>
+  <!-- JetBrains-style cursor in the bottom-right corner. -->
+  <rect x="20.75" y="28.75" width="11" height="4" fill="#FFFFFF"/>
+</svg>

@@ -1,0 +1,19 @@
+<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="brilBg" x1="0" y1="0" x2="16" y2="16" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#46B1C9"/>
+      <stop offset="1" stop-color="#3358B7"/>
+    </linearGradient>
+  </defs>
+  <rect x="1" y="1" width="14" height="14" rx="3.5" fill="url(#brilBg)"/>
+  <!-- A tiny control-flow graph: one node branching into two. -->
+  <g stroke="#FFFFFF" stroke-width="1.1" stroke-linecap="round" opacity="0.95">
+    <path d="M8 5 L4.8 10.4"/>
+    <path d="M8 5 L11.2 10.4"/>
+  </g>
+  <g fill="#FFFFFF">
+    <circle cx="8" cy="4.4" r="1.9"/>
+    <circle cx="4.6" cy="11.3" r="1.9"/>
+    <circle cx="11.4" cy="11.3" r="1.9"/>
+  </g>
+</svg>

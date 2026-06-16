@@ -1,22 +1,37 @@
-# intellij-bril
+<img align="left" width="128" height="128" src="src/main/resources/META-INF/pluginIcon.svg">
+<h3>
+  Bril language support for IntelliJ-based IDEs
+  &nbsp;
+  <a href="https://github.com/seclerp/intellij-bril/actions/workflows/build.yml"><img src="https://github.com/seclerp/intellij-bril/workflows/Build/badge.svg" alt="Build" align="absmiddle"></a>
+  <a href="https://plugins.jetbrains.com/plugin/MARKETPLACE_ID"><img src="https://img.shields.io/jetbrains/plugin/v/MARKETPLACE_ID.svg?label=Plugin&colorB=0A7BBB" alt="Version" align="absmiddle"></a>
+  <a href="https://plugins.jetbrains.com/plugin/MARKETPLACE_ID"><img src="https://img.shields.io/jetbrains/plugin/d/MARKETPLACE_ID.svg?label=Downloads&colorB=0A7BBB" alt="Downloads" align="absmiddle"></a>
+</h3>
 
-![Build](https://github.com/seclerp/intellij-bril/workflows/Build/badge.svg)
-[![Version](https://img.shields.io/jetbrains/plugin/v/MARKETPLACE_ID.svg)](https://plugins.jetbrains.com/plugin/MARKETPLACE_ID)
-[![Downloads](https://img.shields.io/jetbrains/plugin/d/MARKETPLACE_ID.svg)](https://plugins.jetbrains.com/plugin/MARKETPLACE_ID)
+This plugins adds an editor support for Bril – the educational compiler IR language.
 
-## Template ToDo list
-- [x] Create a new [IntelliJ Platform Plugin Template][template] project.
-- [ ] Get familiar with the [template documentation][template].
-- [ ] Adjust the [group](./gradle.properties), as well as the [id](./src/main/resources/META-INF/plugin.xml), [name](./src/main/resources/META-INF/plugin.xml), and [sources package](./src/main/kotlin).
-- [ ] Adjust the plugin [description](./src/main/resources/META-INF/plugin.xml) (see [Tips][docs:plugin-description]) and this README to describe what your plugin does.
-- [ ] Review the [Legal Agreements](https://plugins.jetbrains.com/docs/marketplace/legal-agreements.html?from=IJPluginTemplate).
-- [ ] [Publish a plugin manually](https://plugins.jetbrains.com/docs/intellij/publishing-plugin.html?from=IJPluginTemplate) for the first time.
-- [ ] Set the `MARKETPLACE_ID` in the above README badges. You can obtain it once the plugin is published to JetBrains Marketplace.
-- [ ] Set the [Plugin Signing](https://plugins.jetbrains.com/docs/intellij/plugin-signing.html?from=IJPluginTemplate) related [secrets](https://github.com/JetBrains/intellij-platform-plugin-template#environment-variables).
-- [ ] Set the [Deployment Token](https://plugins.jetbrains.com/docs/marketplace/plugin-upload.html?from=IJPluginTemplate).
-- [ ] Click the <kbd>Watch</kbd> button on the top of the [IntelliJ Platform Plugin Template][template] to be notified about releases containing new features and fixes.
+<br/>
 
-This Fancy IntelliJ Platform Plugin is going to be your implementation of the brilliant ideas that you have.
+<!-- Plugin description -->
+A plugin for IntelliJ-based IDEs that adds editor support for [Bril](https://capra.cs.cornell.edu/bril/), the
+**Big Red Intermediate Language** — a small instruction-representation language built for compilers
+education. The plugin understands Bril's human-readable text format (the one produced by `bril2txt`).
+
+### Features
+
+- **File type** — recognizes `.bril` files.
+- **Lexing & parsing** — a full lexer and parser for the Bril text format (functions, typed arguments
+  and return types, `const`/value/effect operations, labels, and parameterized types such as `ptr<int>`),
+  with error highlighting.
+- **Syntax highlighting** — comments, literals, `@function` and `.label` identifiers, primitive types
+  (`int`, `bool`, `float`, `char`, `ptr`), and core/extension opcodes (`add`, `br`, `call`, `print`,
+  `alloc`, `phi`, …). Colors are configurable under <kbd>Settings</kbd> > <kbd>Editor</kbd> >
+  <kbd>Color Scheme</kbd> > <kbd>Bril</kbd>.
+- **Editing aids** — `#` line-comment toggling (<kbd>Ctrl</kbd>+<kbd>/</kbd>) and brace matching for
+  `{}`, `()`, and `<>`.
+
+> Scope is currently lexing, parsing, and highlighting. References, code completion, and other
+> navigation features are not implemented yet.
+<!-- Plugin description end -->
 
 ## Installation
 
@@ -42,4 +57,3 @@ This Fancy IntelliJ Platform Plugin is going to be your implementation of the br
 Plugin based on the [IntelliJ Platform Plugin Template][template].
 
 [template]: https://github.com/JetBrains/intellij-platform-plugin-template
-[docs:plugin-description]: https://plugins.jetbrains.com/docs/intellij/plugin-user-experience.html#plugin-description-and-presentation

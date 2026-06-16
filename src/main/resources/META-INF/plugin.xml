@@ -1,7 +1,7 @@
 <!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
 <idea-plugin>
-    <id>com.github.seclerp.intellijbril</id>
-    <name>intellij-bril</name>
+    <id>com.github.seclerp.bril</id>
+    <name>Bril</name>
     <vendor>seclerp</vendor>
     <description><![CDATA[
         <p><b>intellij-bril</b> is a repository that provides a pure template to make it easier to create a new plugin project.</p>
@@ -15,5 +15,30 @@
     <extensions defaultExtensionNs="com.intellij">
         <toolWindow factoryClass="com.github.seclerp.intellijbril.toolWindow.MyToolWindowFactory" id="MyToolWindow"/>
         <postStartupActivity implementation="com.github.seclerp.intellijbril.startup.MyProjectActivity" />
+
+        <!-- Bril language support -->
+        <fileType
+            name="Bril"
+            implementationClass="com.github.seclerp.bril.BrilFileType"
+            fieldName="INSTANCE"
+            language="Bril"
+            extensions="bril"/>
+        <lang.parserDefinition
+            language="Bril"
+            implementationClass="com.github.seclerp.bril.parser.BrilParserDefinition"/>
+        <lang.syntaxHighlighterFactory
+            language="Bril"
+            implementationClass="com.github.seclerp.bril.highlighting.BrilSyntaxHighlighterFactory"/>
+        <annotator
+            language="Bril"
+            implementationClass="com.github.seclerp.bril.highlighting.BrilAnnotator"/>
+        <lang.commenter
+            language="Bril"
+            implementationClass="com.github.seclerp.bril.BrilCommenter"/>
+        <lang.braceMatcher
+            language="Bril"
+            implementationClass="com.github.seclerp.bril.BrilBraceMatcher"/>
+        <colorSettingsPage
+            implementation="com.github.seclerp.bril.highlighting.BrilColorSettingsPage"/>
     </extensions>
 </idea-plugin>
