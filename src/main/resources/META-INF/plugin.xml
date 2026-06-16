@@ -2,11 +2,36 @@
 <idea-plugin>
     <id>com.github.seclerp.bril</id>
     <name>Bril</name>
-    <vendor>seclerp</vendor>
+    <vendor url="https://github.com/seclerp">seclerp</vendor>
     <description><![CDATA[
-        <p><b>intellij-bril</b> is a repository that provides a pure template to make it easier to create a new plugin project.</p>
-        <p>The main goal of this template is to speed up the setup phase of plugin development for both new and experienced developers by preconfiguring the project scaffold and CI, linking to the proper documentation pages, and keeping everything organized.</p>
+        <p>Editor support for <a href="https://capra.cs.cornell.edu/bril/">Bril</a>, the
+        <b>Big Red Intermediate Language</b> — a small instruction-representation language built
+        for compilers education. The plugin understands Bril's human-readable text format
+        (the one produced by <code>bril2txt</code>).</p>
+        <h3>Features</h3>
+        <ul>
+            <li><b>File type</b> — recognizes <code>.bril</code> files.</li>
+            <li><b>Lexing &amp; parsing</b> — a full lexer and parser for the Bril text format
+            (functions, typed arguments and return types, <code>const</code>/value/effect
+            operations, labels, and parameterized types such as <code>ptr&lt;int&gt;</code>),
+            with error highlighting.</li>
+            <li><b>Syntax highlighting</b> — comments, literals, <code>@function</code> and
+            <code>.label</code> identifiers, primitive types (<code>int</code>, <code>bool</code>,
+            <code>float</code>, <code>char</code>, <code>ptr</code>), and core/extension opcodes
+            (<code>add</code>, <code>br</code>, <code>call</code>, <code>print</code>,
+            <code>alloc</code>, <code>phi</code>, …). Colors are configurable under
+            <i>Settings | Editor | Color Scheme | Bril</i>.</li>
+            <li><b>Editing aids</b> — <code>#</code> line-comment toggling and brace matching
+            for <code>{}</code>, <code>()</code>, and <code>&lt;&gt;</code>.</li>
+        </ul>
     ]]></description>
+
+    <change-notes><![CDATA[
+        <ul>
+            <li><b>1.0.0</b> — Initial release: Bril text-format file type, lexer, parser, and
+            syntax highlighting, plus line-comment and brace-matching support.</li>
+        </ul>
+    ]]></change-notes>
 
     <depends>com.intellij.modules.platform</depends>
 
