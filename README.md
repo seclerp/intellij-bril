@@ -16,6 +16,8 @@ A plugin for IntelliJ-based IDEs that adds editor support for [Bril](https://cap
 **Big Red Intermediate Language** — a small instruction-representation language built for compilers
 education. The plugin understands Bril's human-readable text format (the one produced by `bril2txt`).
 
+<br/>
+
 ### Features
 
 - **File type** — recognizes `.bril` files.
