@@ -46,6 +46,12 @@ object BrilElementTypes {
     @JvmField val LABEL_DEFINITION: IElementType = BrilElementType("LABEL_DEFINITION")
     @JvmField val OPCODE: IElementType = BrilElementType("OPCODE")
     @JvmField val LITERAL: IElementType = BrilElementType("LITERAL")
+
+    // Operand wrappers — each holds a single identifier leaf and carries a reference to its
+    // definition, powering Go to Declaration and Find Usages.
+    @JvmField val VARIABLE_REFERENCE: IElementType = BrilElementType("VARIABLE_REFERENCE")
+    @JvmField val FUNCTION_REFERENCE: IElementType = BrilElementType("FUNCTION_REFERENCE")
+    @JvmField val LABEL_REFERENCE: IElementType = BrilElementType("LABEL_REFERENCE")
 }
 
 /** Bril core opcodes plus common extension opcodes, highlighted as keywords. */

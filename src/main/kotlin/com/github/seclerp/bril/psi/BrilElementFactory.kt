@@ -17,6 +17,9 @@ object BrilElementFactory {
         BrilElementTypes.CONST_INSTRUCTION -> BrilConstInstruction(node)
         BrilElementTypes.VALUE_OPERATION -> BrilValueOperation(node)
         BrilElementTypes.LABEL_DEFINITION -> BrilLabelDefinition(node)
+        BrilElementTypes.VARIABLE_REFERENCE -> BrilVariableReference(node)
+        BrilElementTypes.FUNCTION_REFERENCE -> BrilFunctionReference(node)
+        BrilElementTypes.LABEL_REFERENCE -> BrilLabelReference(node)
         else -> BrilPsiElement(node)
     }
 }

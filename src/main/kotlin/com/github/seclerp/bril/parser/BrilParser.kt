@@ -166,18 +166,24 @@ class BrilParser : PsiParser {
         marker.done(BrilElementTypes.EFFECT_OPERATION)
     }
 
-    /** op: IDENT (FUNC | LABEL | IDENT)* — the leading IDENT is wrapped as an OPCODE. */
+    /**
+     * op: IDENT (FUNC | LABEL | IDENT)* — the leading IDENT is wrapped as an OPCODE and each
+     * operand is wrapped in a reference node so it can resolve to its definition.
+     */
     private fun parseOp(builder: PsiBuilder) {
         val opcode = builder.mark()
         expect(builder, BrilTokenTypes.IDENTIFIER, "operation name")
         opcode.done(BrilElementTypes.OPCODE)
         while (!builder.eof()) {
-            when (builder.tokenType) {
-                BrilTokenTypes.IDENTIFIER,
-                BrilTokenTypes.FUNC_IDENT,
-                BrilTokenTypes.LABEL_IDENT -> builder.advanceLexer()
+            val operandType = when (builder.tokenType) {
+                BrilTokenTypes.IDENTIFIER -> BrilElementTypes.VARIABLE_REFERENCE
+                BrilTokenTypes.FUNC_IDENT -> BrilElementTypes.FUNCTION_REFERENCE
+                BrilTokenTypes.LABEL_IDENT -> BrilElementTypes.LABEL_REFERENCE
                 else -> return
             }
+            val operand = builder.mark()
+            builder.advanceLexer()
+            operand.done(operandType)
         }
     }
 
