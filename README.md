@@ -9,14 +9,12 @@
 
 This plugin adds editor support for Bril – the educational compiler IR language.
 
-<br/>
+<br/><br/>
 
 <!-- Plugin description -->
 A plugin for IntelliJ-based IDEs that adds editor support for [Bril](https://capra.cs.cornell.edu/bril/), the
 **Big Red Intermediate Language** — a small instruction-representation language built for compilers
 education. The plugin understands Bril's human-readable text format (the one produced by `bril2txt`).
-
-<br/>
 
 ### Features
 
