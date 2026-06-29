@@ -4,4 +4,4 @@
 
 ## [Unreleased]
 ### Added
-- Initial scaffold created from [IntelliJ Platform Plugin Template](https://github.com/JetBrains/intellij-platform-plugin-template)
+- Initial release: Bril text-format file type, lexer, parser, and syntax highlighting, plus line-comment and brace-matching support.
