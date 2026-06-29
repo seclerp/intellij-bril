@@ -60,5 +60,8 @@
             implementationClass="com.github.seclerp.bril.BrilBraceMatcher"/>
         <colorSettingsPage
             implementation="com.github.seclerp.bril.highlighting.BrilColorSettingsPage"/>
+        <lang.findUsagesProvider
+            language="Bril"
+            implementationClass="com.github.seclerp.bril.references.BrilFindUsagesProvider"/>
     </extensions>
 </idea-plugin>
