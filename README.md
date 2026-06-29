@@ -3,11 +3,11 @@
   Bril language support for IntelliJ
   &nbsp;
   <a href="https://github.com/seclerp/intellij-bril/actions/workflows/build.yml"><img src="https://github.com/seclerp/intellij-bril/workflows/Build/badge.svg" alt="Build" align="absmiddle"></a>
-  <a href="https://plugins.jetbrains.com/plugin/MARKETPLACE_ID"><img src="https://img.shields.io/jetbrains/plugin/v/MARKETPLACE_ID.svg?label=Plugin&colorB=0A7BBB" alt="Version" align="absmiddle"></a>
-  <a href="https://plugins.jetbrains.com/plugin/MARKETPLACE_ID"><img src="https://img.shields.io/jetbrains/plugin/d/MARKETPLACE_ID.svg?label=Downloads&colorB=0A7BBB" alt="Downloads" align="absmiddle"></a>
+  <a href="https://plugins.jetbrains.com/plugin/MARKETPLACE_ID"><img src="https://img.shields.io/jetbrains/plugin/v/32320.svg?label=Plugin&colorB=0A7BBB" alt="Version" align="absmiddle"></a>
+  <a href="https://plugins.jetbrains.com/plugin/MARKETPLACE_ID"><img src="https://img.shields.io/jetbrains/plugin/d/32320.svg?label=Downloads&colorB=0A7BBB" alt="Downloads" align="absmiddle"></a>
 </h3>
 
-This plugins adds an editor support for Bril – the educational compiler IR language.
+This plugin adds editor support for Bril – the educational compiler IR language.
 
 <br/>
 
