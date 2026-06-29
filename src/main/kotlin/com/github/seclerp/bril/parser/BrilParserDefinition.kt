@@ -2,8 +2,8 @@ package com.github.seclerp.bril.parser
 
 import com.github.seclerp.bril.BrilLanguage
 import com.github.seclerp.bril.lexer.BrilLexer
+import com.github.seclerp.bril.psi.BrilElementFactory
 import com.github.seclerp.bril.psi.BrilFile
-import com.github.seclerp.bril.psi.BrilPsiElement
 import com.github.seclerp.bril.psi.BrilTokenTypes
 import com.intellij.lang.ASTNode
 import com.intellij.lang.ParserDefinition
@@ -24,7 +24,7 @@ class BrilParserDefinition : ParserDefinition {
     override fun getCommentTokens(): TokenSet = BrilTokenTypes.COMMENTS
     override fun getWhitespaceTokens(): TokenSet = WHITESPACE
     override fun getStringLiteralElements(): TokenSet = TokenSet.EMPTY
-    override fun createElement(node: ASTNode): PsiElement = BrilPsiElement(node)
+    override fun createElement(node: ASTNode): PsiElement = BrilElementFactory.createElement(node)
     override fun createFile(viewProvider: FileViewProvider): PsiFile = BrilFile(viewProvider)
 
     companion object {

@@ -4,8 +4,8 @@ import com.intellij.extapi.psi.ASTWrapperPsiElement
 import com.intellij.lang.ASTNode
 
 /**
- * Generic PSI wrapper for every Bril composite node. The plugin currently only needs the
- * element-type distinctions (for highlighting and tree inspection), so a single wrapper class
- * is enough; dedicated PSI classes can be introduced later for navigation/reference support.
+ * Generic PSI wrapper for Bril composite nodes that do not introduce a name — opcodes, types,
+ * literals and effect operations. Name-introducing nodes use dedicated [BrilNamedElement]
+ * subclasses instead; [BrilElementFactory] decides which wrapper a node gets.
  */
 class BrilPsiElement(node: ASTNode) : ASTWrapperPsiElement(node)
