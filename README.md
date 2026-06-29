@@ -37,7 +37,7 @@ education. The plugin understands Bril's human-readable text format (the one pro
 
 - Using the IDE built-in plugin system:
 
-  <kbd>Settings/Preferences</kbd> > <kbd>Plugins</kbd> > <kbd>Marketplace</kbd> > <kbd>Search for "intellij-bril"</kbd> >
+  <kbd>Settings/Preferences</kbd> > <kbd>Plugins</kbd> > <kbd>Marketplace</kbd> > <kbd>Search for "Bril"</kbd> >
   <kbd>Install</kbd>
 
 - Using JetBrains Marketplace:
